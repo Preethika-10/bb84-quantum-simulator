@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BB84 Quantum Cryptography – Integrated Walkthrough</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <canvas id="bg"></canvas>
+
+    <div class="wrap">
+        <header>
+            <div class="badge">⚛ BB84 QUANTUM SIMULATOR</div>
+            <h1>Integrated Protocol Walkthrough</h1>
+        </header>
+
+        <div class="ctrl-card">
+            <div class="ctrl-grid">
+                <div>
+                    <span class="lbl">PHOTON COUNT</span>
+                    <input type="range" id="nP" min="8" max="20" value="12" oninput="document.getElementById('nV').textContent=this.value">
+                    <div class="rval" id="nV">12</div>
+                </div>
+                <div>
+                    <span class="lbl">QUANTUM INTERCEPTOR</span>
+                    <div class="eve-switch-wrap">
+                        <label class="switch">
+                            <input type="checkbox" id="eveTog" checked onchange="updateEveUI()">
+                            <span class="slider"></span>
+                        </label>
+                        <span id="eveStatusText" class="active-text">EVE ACTIVE</span>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-go" id="goBtn" onclick="startFullProtocol()">▶ START INTEGRATED SIMULATION</button>
+        </div>
+
+        <div id="steps"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
